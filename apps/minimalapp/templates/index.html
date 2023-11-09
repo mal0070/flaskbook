@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Name</title>
+        <!--style.css 읽어들이기-->
+        <link 
+            rel="stylesheet"
+            href="{{url_('static', filename='style.css')}}"
+        />
+    </head>
+    
+    <body>
+        {% if name %}
+        <h1>Name: {{name}}</h1>
+        {% else %}
+        <h1>Name:</h1>
+        {% endif %}
+    <body>
+
+    <ul>
+        {% for user in users %}
+        <li> <a href="{{user.url}}">{{user.username}}</a></li>
+        {% endfor%}
+    </ul>
+</html>
